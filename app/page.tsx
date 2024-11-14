@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+/* eslint-disable react/no-unescaped-entities */
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -30,7 +31,9 @@ export default function Home() {
         {/* About Me Section */}
         <section id="about" className="text-center p-8">
           <h2 className="text-4xl font-bold mb-4">About Me</h2>
-          <p className="mb-8 text-lg">Hi, I&apos;m David Santos. I&apos;m a passionate software engineering student at UTD and cybersecurity enthusiast with a passion for creating engaging digital experiences. I also love to workout and lift heavy weights! I will be competing in my first powerlifting competition on Jan 4th</p>
+          <p className="mb-8 text-lg">
+            Hi, I'm David Santos. I'm a passionate software engineering student at UTD and cybersecurity enthusiast with a passion for creating engaging digital experiences. I also love to workout and lift heavy weights! I will be competing in my first powerlifting competition on Jan 4th.
+          </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {/* Placeholder for professional photos with captions */}
             <div className="relative">
@@ -65,7 +68,7 @@ export default function Home() {
         {/* Personal Training Inquiries Section */}
         <section id="training" className="text-center p-8">
           <h2 className="text-4xl font-bold mb-4">Personal Training Inquiries</h2>
-          <p className="mb-4">Reach out if you&apos;re interested in virtual or in-person personal training!</p>
+          <p className="mb-4">Reach out if you're interested in virtual or in-person personal training!</p>
           {isClient && ( // Render form only on the client side
             <form className="max-w-md mx-auto space-y-4">
               <input type="text" placeholder="Your Name" className="w-full p-2 rounded bg-gray-900 text-white" />
@@ -79,7 +82,7 @@ export default function Home() {
         {/* Website Building Section */}
         <section id="websites" className="text-center p-8">
           <h2 className="text-4xl font-bold mb-4">Website Building</h2>
-          <p className="mb-8">I can help you build a professional and functional website. Here&apos;s what I offer:</p>
+          <p className="mb-8">I can help you build a professional and functional website. Here's what I offer:</p>
           <p>Responsive design, clean code, and custom layouts to match your vision.</p>
         </section>
 
@@ -89,7 +92,7 @@ export default function Home() {
           <p>I provide website vulnerability assessments to ensure your data is protected. Services include:</p>
           <ul className="list-disc list-inside mt-4">
             <li>Vulnerability scanning and secure coding checks</li>
-            <li>Recommendations for strengthening your site&apos;s security</li>
+            <li>Recommendations for strengthening your site's security</li>
             <li>Focus on data protection and privacy compliance</li>
           </ul>
         </section>
