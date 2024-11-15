@@ -1,5 +1,5 @@
 import nodemailer from 'nodemailer';
-
+console.log("sendEmail function is being called");
 export default async function sendEmail({ name, email, message }) {
   console.log("Environment Variables:");
   console.log("SMTP_USER:", process.env.SMTP_USER);
