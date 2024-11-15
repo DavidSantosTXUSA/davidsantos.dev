@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer';
 
 export default async function sendEmail({ name, email, message }) {
-  // Log environment variables to verify they are being read correctly
+  console.log("Environment Variables:");
   console.log("SMTP_USER:", process.env.SMTP_USER);
   console.log("SMTP_PASSWORD:", process.env.SMTP_PASSWORD);
   console.log("SMTP_HOST:", process.env.SMTP_HOST);
@@ -24,10 +24,10 @@ export default async function sendEmail({ name, email, message }) {
       subject: `New message from ${name}`,
       text: `Email: ${email}\n\nMessage:\n${message}`,
     });
-    console.log("Email sent:", info); // Log success information
+    console.log("Email sent:", info);
     return { success: true };
   } catch (error) {
-    console.error("Error sending email:", error); // Log detailed error
+    console.error("Error sending email:", error);
     return { success: false, error: error.message };
   }
 }
