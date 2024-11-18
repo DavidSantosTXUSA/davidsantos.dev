@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from 'next/link';
 
-  
+/* eslint-disable react/no-unescaped-entities */  
 export default function Contact() {
   const [isClient, setIsClient] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
