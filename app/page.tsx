@@ -38,7 +38,7 @@ export default function Home() {
       {/* Navigation Bar */}
       <nav className="fixed top-0 left-0 right-0 flex justify-center p-4 bg-black shadow-lg z-10">
         <div className="flex gap-8">
-          <Link href="/home">Home</Link>
+          <Link href="/">Home</Link>
           <Link href="/about">About Me</Link>
           <Link href="/projects">Projects</Link>
           <Link href="/training">Personal Training and Workoutplans!</Link>
