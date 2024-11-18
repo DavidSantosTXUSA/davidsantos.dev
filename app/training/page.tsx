@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
+/* eslint-disable react/no-unescaped-entities */  
+
 export default function Training() {
     return (
         <div className="min-h-screen bg-black text-white font-sans">

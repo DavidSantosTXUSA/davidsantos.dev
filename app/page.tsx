@@ -1,38 +1,8 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 /* eslint-disable react/no-unescaped-entities */
 
 export default function Home() {
-  const [isClient, setIsClient] = useState(false);
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    try {
-      const response = await fetch("/api/sendEmail", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-      const result = await response.json();
-      if (result.success) {
-        alert("Message sent successfully!");
-        setFormData({ name: "", email: "", message: "" }); // Reset form on success
-      } else {
-        alert("Failed to send message. Please try again.");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      alert("An error occurred while sending the message.");
-    }
-  };
-
   return (
     <div className="min-h-screen bg-black text-white font-sans">
       {/* Navigation Bar */}

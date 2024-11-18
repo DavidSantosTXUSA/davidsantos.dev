@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+/* eslint-disable react/no-unescaped-entities */  
 export default function Projects() {
     return (
         <div className="min-h-screen bg-black text-white font-sans">
