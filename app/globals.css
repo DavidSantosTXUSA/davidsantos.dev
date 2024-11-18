@@ -19,3 +19,65 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+a:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.05);
+}
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+p {
+  font-family: 'Roboto', sans-serif;
+}
+.animated-background{
+  background: linear-gradient(60deg, #002aff, #00ff51);
+  background-size: 400% 400%;
+  animation: gradient-animation 10s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+  z-index: 10;
+}
+
+.navbar a {
+  color: white;
+  margin: 8px 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #00c6ff; /* Changes to a highlighted color when hovered */
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: center; /* Center the links on smaller screens */
+    padding: 8px; /* Reduce padding */
+  }
+
+  .navbar a {
+    margin: 4px 8px; /* Reduce margin for smaller screens */
+    font-size: 14px; /* Reduce font size to fit better */
+  }
+}
+

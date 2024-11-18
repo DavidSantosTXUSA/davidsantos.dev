@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 export default function Training() {
     return (
-        <div className="min-h-screen bg-black text-white font-sans">
-            <nav className="fixed top-0 left-0 right-0 flex justify-center p-4 bg-black shadow-lg z-10">
+        <div className="min-h-screen bg-black text-white font-sans animated-background">
+            <nav className="navbar">
         <div className="flex gap-8">
           <Link href="/">Home</Link>
           <Link href="/about">About Me</Link>

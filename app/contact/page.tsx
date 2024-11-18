@@ -31,9 +31,9 @@ export default function Contact() {
     }
   };
     return (
-        <div className="min-h-screen bg-black text-white font-sans">
-            <nav className="fixed top-0 left-0 right-0 flex justify-center p-4 bg-black shadow-lg z-10">
-        <div className="flex gap-8">
+        <div className="min-h-screen bg-black text-white font-sans animated-background">
+            <nav className="navbar">
+            <div className="flex gap-8">
           <Link href="/">Home</Link>
           <Link href="/about">About Me</Link>
           <Link href="/projects">Projects</Link>
@@ -71,7 +71,7 @@ export default function Contact() {
                 className="w-full p-2 rounded bg-gray-900 text-white"
                 required
               ></textarea>
-              <button type="submit" className="bg-blue-500 px-4 py-2 rounded hover:bg-blue-600 transition">Send Message</button>
+              <button type="submit" className="bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 rounded hover:scale-110 transition-transform duration-300 ease-in-out shadow-lg hover:shadow-2xl">Send Message</button>
             </form>
           )}
         </section>

@@ -4,8 +4,8 @@ import Image from 'next/image';
 /* eslint-disable react/no-unescaped-entities */  
 export default function About() {
     return (
-        <div className="min-h-screen bg-black text-white font-sans">
-            <nav className="fixed top-0 left-0 right-0 flex justify-center p-4 bg-black shadow-lg z-10">
+        <div className="min-h-screen bg-black text-white font-sans animated-background">
+            <nav className="navbar">
         <div className="flex gap-8">
           <Link href="/">Home</Link>
           <Link href="/about">About Me</Link>
@@ -17,7 +17,7 @@ export default function About() {
       </nav>
             <main className="pt-20 p-8 text-center">
                 {/* About Me Section */}
-                <section id="about" className="text-center p-8">
+                <section id="about" className="text-center p-8 ">
                     <h2 className="text-4xl font-bold mb-4">About Me</h2>
                     <p className="mb-8 text-lg">
                         Hi, I'm David Santos. I'm a passionate software engineering student at UTD and cybersecurity enthusiast with a passion for creating engaging digital experiences. I also love to workout and lift heavy weights! I will be competing in my first powerlifting competition on Jan 4th.
