@@ -39,7 +39,7 @@ export default function Projects() {
                             <h3 className="text-xl font-semibold">Vehicle Fuel Economy Data Visualization App</h3>
                             <p className="mb-4">An interactive full stack application that allows users to visualize and analyze vehicle fuel economy data from 2021 to 2025. The app provides filtering options, sorting, and dynamic charts to help users gain insights into important metrics.</p>
                             <div className="flex justify-center gap-4">
-                                <a href="https://github.com/DavidSantosTXUSA/MyWorkoutApp" target="_blank" className="text-blue-400 hover:text-blue-600">GitHub Link Click me!</a>
+                                <a href="https://github.com/DavidSantosTXUSA/Vehicle_Fuel_Economy_Data_Visualization_App" target="_blank" className="text-blue-400 hover:text-blue-600">GitHub Link Click me!</a>
                                 <a href="https://youtu.be/HvtVZsljaiQ" target="_blank" className="text-green-400 hover:text-green-600">Live Demo</a>
                             </div>
                         </div>
