@@ -19,7 +19,7 @@ export default function Services() {
         <section id="websites" className="text-center p-8">
           <h2 className="text-4xl font-bold mb-4">Website Building</h2>
           <p className="mb-8">I can help you build a professional and functional website. Here's what I offer:</p>
-          <p>Responsive design, clean code, and custom layouts to match your vision.</p>
+          <p>Responsive design, clean code, and custom layouts to match your vision. Inital build is always free, pricing is for maintaince if you like what I can give you. Contact me if interested!</p>
         </section>
 
         {/* Cybersecurity Audit Section */}
@@ -30,6 +30,7 @@ export default function Services() {
             <li>Vulnerability scanning and secure coding checks</li>
             <li>Recommendations for strengthening your site's security</li>
             <li>Focus on data protection and privacy compliance</li>
+            <li>Contact me if interested! Assesments always are free!</li>
           </ul>
         </section>
             </main>

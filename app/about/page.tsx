@@ -23,7 +23,7 @@ export default function About() {
                         Hi, I'm David Santos. I'm a passionate software engineering student at UTD and cybersecurity enthusiast with a passion for creating engaging digital experiences. I also love to workout and lift heavy weights! I will be competing in my first powerlifting competition on Jan 4th.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                        {/* Placeholder for professional photos with captions */}
+                        {/* Placeholder for professional photos with captions 
                         <div className="relative">
                             <Image src="/placeholder1.jpg" alt="Placeholder 1" width={200} height={200} />
                             <p className="absolute bottom-2 left-2 bg-black/75 text-white p-2 rounded">Caption 1</p>
@@ -32,6 +32,7 @@ export default function About() {
                             <Image src="/placeholder2.jpg" alt="Placeholder 2" width={200} height={200} />
                             <p className="absolute bottom-2 left-2 bg-black/75 text-white p-2 rounded">Caption 2</p>
                         </div>
+                        */}
                         {/* Add more placeholders as needed */}
                     </div>
                 </section>

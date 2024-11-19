@@ -5,7 +5,7 @@ export default function Projects() {
     return (
         <div className="min-h-screen bg-black text-white font-sans animated-background ">
             <nav className="navbar">
-            <div className="flex gap-8">
+                <div className="flex gap-8">
                     <Link href="/">Home</Link>
                     <Link href="/about">About Me</Link>
                     <Link href="/projects">Projects</Link>
@@ -27,22 +27,29 @@ export default function Projects() {
                         {/* IOS Workout Tracker App */}
                         <div className="bg-gray-800 p-4 rounded-lg shadow-lg hover:scale-110 transform transition-transform duration-500 hover:bg-blue-700">
                             <h3 className="text-xl font-semibold">IOS Workout Tracker App</h3>
-                            <p className="mb-4">Developed in Swift, this app provides...</p>
+                            <p className="mb-4">Developed in Swift, this iOS app empowers users to effortlessly track and manage their workouts. Built in Xcode, the app features an intuitive user interface, allowing users to log exercises, track sets, reps, and weights, and monitor progress over time</p>
                             <div className="flex justify-center gap-4">
                                 <a href="https://github.com/DavidSantosTXUSA/MyWorkoutApp" target="_blank" className="text-blue-400 hover:text-blue-600">GitHub Link Click me!</a>
-                                <a href="placeholder" target="_blank" className="text-green-400 hover:text-green-600">Live Demo Coming Soon!</a>
+                               {/* <a href="placeholder" target="_blank" className="text-green-400 hover:text-green-600">Live Demo Coming Soon!</a> */}
                             </div>
                         </div>
 
-
+                        {/* HackUTD 2024 */}
+                        <div className="bg-gray-800 p-4 rounded-lg shadow-lg hover:scale-110 transform transition-transform duration-500 hover:bg-blue-700">
+                            <h3 className="text-xl font-semibold">Vehicle Fuel Economy Data Visualization App</h3>
+                            <p className="mb-4">An interactive full stack application that allows users to visualize and analyze vehicle fuel economy data from 2021 to 2025. The app provides filtering options, sorting, and dynamic charts to help users gain insights into important metrics.</p>
+                            <div className="flex justify-center gap-4">
+                                <a href="https://github.com/DavidSantosTXUSA/MyWorkoutApp" target="_blank" className="text-blue-400 hover:text-blue-600">GitHub Link Click me!</a>
+                                <a href="https://youtu.be/HvtVZsljaiQ" target="_blank" className="text-green-400 hover:text-green-600">Live Demo</a>
+                            </div>
+                        </div>
                         {/* Phishing Detector Using Google Safe Browsing API */}
                         <div className="bg-gray-800 p-4 rounded-lg shadow-lg hover:scale-110 transform transition-transform duration-500 hover:bg-blue-700">
                             <h3 className="text-xl font-semibold">Phishing Detector</h3>
                             <p className="mb-4">A Python project that uses the Google Safe Browsing API to detect suspicious URLs, achieving high accuracy in identifying phishing threats.</p>
                             <div className="flex justify-center gap-4">
                                 <a href="https://github.com/DavidSantosTXUSA/DavidSantosTXUSA-Phishing-Detector-Using-Google-Safe-Browsing-API" target="_blank" className="text-blue-400">GitHub Link Click me!</a>
-                                <a href="placeholder" target="_blank" className="text-green-400">Live Demo Coming Soon!</a>
-                            </div>
+                               {/* <a href="placeholder" target="_blank" className="text-green-400 hover:text-green-600">Live Demo Coming Soon!</a> */}                            </div>
                         </div>
 
                         {/* Discord Moderation Bot */}
@@ -51,8 +58,7 @@ export default function Projects() {
                             <p className="mb-4">Built with Python and MongoDB, this bot enables server admins to enforce custom banned words, reducing inappropriate content and improving community compliance.</p>
                             <div className="flex justify-center gap-4">
                                 <a href="https://github.com/DavidSantosTXUSA/MyDiscordBot" target="_blank" className="text-blue-400">GitHub Link Click me!</a>
-                                <a href="placeholder" target="_blank" className="text-green-400">Live Demo Coming Soon!</a>
-                            </div>
+                               {/* <a href="placeholder" target="_blank" className="text-green-400 hover:text-green-600">Live Demo Coming Soon!</a> */}                            </div>
                         </div>
 
                         {/* Old Portfolio - GitHub Pages */}

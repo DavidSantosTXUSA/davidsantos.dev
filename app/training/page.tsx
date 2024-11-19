@@ -19,15 +19,17 @@ export default function Training() {
                 {/* Personal Training Section */}
         <section id="training" className="text-center p-8">
           <h2 className="text-4xl font-bold mb-4">Personal Training Qualifications</h2>
-          <p className="mb-4">With extensive experience in personal training, I specialize in strength training, powerlifting, and fitness coaching. My focus is on helping clients achieve their fitness goals through personalized, science-backed workout plans.</p>
+          <p className="mb-4">I am a NCEP certified personal trainier with extensive experience in personal training, I specialize in strength training, powerlifting, and fitness coaching. My focus is on helping clients achieve their fitness goals through personalized, science-backed workout plans. Want a cheap workoutplan? Send me a email in the contact me section!</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             <div className="relative">
-              <Image src="/progress-placeholder1.jpg" alt="Progress Photo 1" width={200} height={200} />
+              {/*<Image src="/progress-placeholder1.jpg" alt="Progress Photo 1" width={200} height={200} />
               <p className="absolute bottom-2 left-2 bg-black/75 text-white p-2 rounded">Lift/Progress Description 1</p>
-            </div>
+              */}
+            </div> 
             <div className="relative">
-              <Image src="/progress-placeholder2.jpg" alt="Progress Photo 2" width={200} height={200} />
+              {/*<Image src="/progress-placeholder2.jpg" alt="Progress Photo 2" width={200} height={200} />
               <p className="absolute bottom-2 left-2 bg-black/75 text-white p-2 rounded">Lift/Progress Description 2</p>
+              */}
             </div>
           </div>
         </section>
