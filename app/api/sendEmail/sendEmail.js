@@ -1,4 +1,3 @@
-import axios from 'axios';
 import nodemailer from 'nodemailer';
 
 export default async function sendEmail(req, res) {
