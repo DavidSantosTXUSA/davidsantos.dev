@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+/*import Image from 'next/image';
 /* eslint-disable react/no-unescaped-entities */  
 
 export default function Training() {
