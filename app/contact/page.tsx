@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from 'next/link';
 import ReCAPTCHA from "react-google-recaptcha";
+import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 
 /* eslint-disable react/no-unescaped-entities */
 export default function Contact() {
@@ -54,7 +55,9 @@ export default function Contact() {
       <main className="pt-20 p-8 text-center">
         <section id="contact" className="text-center p-8">
           <h2 className="text-4xl font-bold mb-4">Contact Me</h2>
-          <p className="mb-4">Feel free to reach out for inquiries about personal training, website development, or cybersecurity services.</p>
+          <p className="mb-4">Feel free to reach out for inquiries about personal training, website development, or cybersecurity services.
+            **NOTE AS OF NOV 20TH THIS FORM IS NOT WORKING CURRENTLY WORKING ON FIX. IN MEANTIME SEND EMAILS HERE: dsantos4148@gmail.com.
+          </p>
           {isClient && (
             <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4">
               <input
@@ -92,6 +95,23 @@ export default function Contact() {
             </form>
           )}
         </section>
+        <footer className="bg-black text-white py-6 mt-10">
+      <div className="container mx-auto text-center space-y-4">
+        <p>Follow me on:</p>
+        <div className="flex justify-center gap-4">
+          <Link href="https://www.linkedin.com/in/david-santos-a38a9b283/" target="_blank" className="hover:text-blue-400">
+          <FaLinkedin size={24} /> LinkedIn
+          </Link>
+          <Link href="https://github.com/DavidSantosTXUSA" target="_blank" className="hover:text-gray-400">
+          <FaGithub size={24} /> GitHub
+          </Link>
+          <Link href="https://www.instagram.com/david.santos776/?hl=en" target="_blank" className="hover:text-pink-400">
+          <FaInstagram size={24} /> Instagram
+          </Link>
+        </div>
+        <p>&copy; 2024 David Santos. All Rights Reserved.</p>
+      </div>
+    </footer>
       </main>
     </div>
   );

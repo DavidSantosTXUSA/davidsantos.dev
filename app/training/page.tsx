@@ -1,6 +1,7 @@
 import Link from 'next/link';
 /*import Image from 'next/image';
 /* eslint-disable react/no-unescaped-entities */  
+import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 
 export default function Training() {
     return (
@@ -33,8 +34,26 @@ export default function Training() {
             </div>
           </div>
         </section>
+        <footer className="bg-black text-white py-6 mt-10">
+      <div className="container mx-auto text-center space-y-4">
+        <p>Follow me on:</p>
+        <div className="flex justify-center gap-4">
+          <Link href="https://www.linkedin.com/in/david-santos-a38a9b283/" target="_blank" className="hover:text-blue-400">
+          <FaLinkedin size={24} /> LinkedIn
+          </Link>
+          <Link href="https://github.com/DavidSantosTXUSA" target="_blank" className="hover:text-gray-400">
+          <FaGithub size={24} /> GitHub
+          </Link>
+          <Link href="https://www.instagram.com/david.santos776/?hl=en" target="_blank" className="hover:text-pink-400">
+          <FaInstagram size={24} /> Instagram
+          </Link>
+        </div>
+        <p>&copy; 2024 David Santos. All Rights Reserved.</p>
+      </div>
+    </footer>
             </main>
         </div>
+        
     );
 }
 

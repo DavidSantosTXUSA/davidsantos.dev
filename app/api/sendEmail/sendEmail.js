@@ -1,5 +1,6 @@
 import nodemailer from 'nodemailer';
 
+
 export default async function sendEmail(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Only POST requests are allowed' });
@@ -8,7 +9,7 @@ export default async function sendEmail(req, res) {
   const { name, email, message, recaptchaToken } = req.body;
 
   // Verify reCAPTCHA token
-  const secretKey = process.env.RECAPTCHA_SECRET_KEY; // Store this in your .env file
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
   const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptchaToken}`;
 
   try {
