@@ -1,36 +1,33 @@
 import nodemailer from 'nodemailer';
+import axios from 'axios';
 
-
-export default async function sendEmail(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Only POST requests are allowed' });
+export default async function sendEmail({ name, email, message, recaptchaToken }) {
+  if (!name || !email || !message || !recaptchaToken) {
+    return { success: false, message: "All fields are required." };
   }
 
-  const { name, email, message, recaptchaToken } = req.body;
+  try {
+    const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`;
+    const recaptchaResponse = await axios.post(verificationUrl);
 
-  // Verify reCAPTCHA token
-  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
-  const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptchaToken}`;
+    if (!recaptchaResponse.data.success) {
+      return { success: false, message: "Captcha validation failed.", errorCodes: recaptchaResponse.data["error-codes"] };
+    }
+  } catch (error) {
+    return { success: false, message: "Failed to validate reCAPTCHA.", error: error.message };
+  }
 
   try {
-    // Verify the reCAPTCHA token with Google
-    const captchaResponse = await axios.post(verificationUrl);
-    if (!captchaResponse.data.success) {
-      return res.status(400).json({ success: false, message: 'Captcha validation failed' });
-    }
-
-    // Set up nodemailer transporter
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT),
-      secure: false, 
+      secure: Number(process.env.SMTP_PORT) === 465,
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASSWORD,
       },
     });
 
-    // Send the email after captcha verification
     const info = await transporter.sendMail({
       from: process.env.SMTP_USER,
       to: "dsantos4148@gmail.com",
@@ -38,10 +35,8 @@ export default async function sendEmail(req, res) {
       text: `Email: ${email}\n\nMessage:\n${message}`,
     });
 
-    console.log("Email sent:", info);
-    return res.status(200).json({ success: true, message: "Email sent successfully!" });
+    return { success: true, message: "Message sent successfully!" };
   } catch (error) {
-    console.error("Error sending email:", error);
-    return res.status(500).json({ success: false, message: error.message });
+    return { success: false, message: "Failed to send email.", error: error.message };
   }
 }
