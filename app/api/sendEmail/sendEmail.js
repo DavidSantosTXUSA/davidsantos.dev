@@ -27,14 +27,7 @@ export default async function sendEmail({ name, email, message, recaptchaToken }
         pass: process.env.SMTP_PASSWORD,
       },
     });
-
-    const info = await transporter.sendMail({
-      from: process.env.SMTP_USER,
-      to: "dsantos4148@gmail.com",
-      subject: `New message from ${name}`,
-      text: `Email: ${email}\n\nMessage:\n${message}`,
-    });
-
+   
     return { success: true, message: "Message sent successfully!" };
   } catch (error) {
     return { success: false, message: "Failed to send email.", error: error.message };
