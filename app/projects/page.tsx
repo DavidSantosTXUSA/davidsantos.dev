@@ -34,7 +34,15 @@ export default function Projects() {
                                {/* <a href="placeholder" target="_blank" className="text-green-400 hover:text-green-600">Live Demo Coming Soon!</a> */}
                             </div>
                         </div>
-
+                        {/* AWS */}
+                        <div className="bg-gray-800 p-4 rounded-lg shadow-lg hover:scale-110 transform transition-transform duration-500 hover:bg-blue-700">
+                            <h3 className="text-xl font-semibold">Data Engineering Project on Real-Time Streaming & Querying Using Kafka, Zookeeper, S3, and Athena</h3>
+                            <p className="mb-4">Developed a real-time stock market data pipeline, integrating financial APIs with Apache Kafka on AWS EC2</p>
+                            <div className="flex justify-center gap-4">
+                                <a href="https://github.com/DavidSantosTXUSA/RealTimeStocksAWS" target="_blank" className="text-blue-400 hover:text-blue-600">GitHub Link Click me!</a>
+                               {/* <a href="placeholder" target="_blank" className="text-green-400 hover:text-green-600">Live Demo Coming Soon!</a> */}
+                            </div>
+                        </div>
                         {/* HackUTD 2024 */}
                         <div className="bg-gray-800 p-4 rounded-lg shadow-lg hover:scale-110 transform transition-transform duration-500 hover:bg-blue-700">
                             <h3 className="text-xl font-semibold">Vehicle Fuel Economy Data Visualization App</h3>
